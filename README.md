@@ -10,7 +10,29 @@ In this project, a multilingual reranking pipeline is being developed using Mono
 
 <img src="images/1.png" width="60%"></img> <img src="images/2.png" width="35%"></img>
 
-### Contributors
+## Evaluation Metrics
+
+1. ***MSE Evaluation***: Measured the mean squared error (MSE) between the student embeddings and teacher embeddings.
+2. ***Translation Accuracy***: measure the translation accuracy. Given a list with source sentences, for example, 1000 English sen- tences. And a list with matching target (translated) sen- tences, for example, 1000 German sentences. For each sentence pair, we check if their embeddings are the closest using cosine similarity.
+3. ***Multi-Lingual Semantic Textual Similarity***: Measured the semantic textual similarity (STS) between sentence pairs in different languages where sentences1 and sentences2 are lists of sentences and the score is a numeric value indicating the semantic similarity between sentences1 item and sentences2 item.
+4. ***Language Bias***: Language bias is a phenomenon where a model shows a preference for a particular language or language pair over others.
+
+    <img src="images/3.png" width="70%"></img>
+
+---
+## Datasets Used
+
+1. TED2020
+2. STS
+
+## Models Used
+
+1. `Teacher Model`: We use an English SBERT model as teacher model M. Model Trained fully from scratch with evaluation done on TED2020 dataset.
+
+2. `Student Model`: XLM RoBERTa (XLM-R)
+
+
+### ***Contributors***
 
 -   Jaimin Gajjar
 -   Saurabh Modi
